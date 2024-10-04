@@ -14,8 +14,8 @@ app.use(morgan("dev"));
 // Mock CRUD API Routes
 app.use("/api/users", userRoutes);
 
-// Log API routes
-logRoutes(app, "./routes.txt"); // Logs to 'routes.txt'
+// Log API routes and generate the frontend API client
+logRoutes(app, "./routes.txt", "../client/src/frontendApiClient.js");
 
 // Start the server
 const port = process.env.PORT || 5000;
