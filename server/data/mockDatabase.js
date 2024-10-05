@@ -1,6 +1,7 @@
-let users = [
-  { id: 1, name: "John Doe", email: "john@example.com" },
-  { id: 2, name: "Jane Smith", email: "jane@example.com" },
-];
+const users = Array.from({ length: 10 }, (_, index) => ({
+  id: index + 1,
+  name: `User ${index + 1}`,
+  email: `user${index + 1}@example.com`,
+}));
 
 module.exports = users;
